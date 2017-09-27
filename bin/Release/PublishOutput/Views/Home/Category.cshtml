@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebJayThomDhuang.ViewModels.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+
+<table class="table">
+    <tr>
+        <th>
+          ID
+        </th>
+        <th>Name</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+    </tr>
+}
+
+</table>
